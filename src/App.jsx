@@ -1,9 +1,15 @@
-import ListGroup from "./components/ListGroup";
+import React from 'react'
+import { Container } from '@mui/material'
+import BasicGrid from './components/layouts/BasicGrid'
+import Result from './components/layouts/Result'
 
-export default function App() {
+const App = () => {
   return (
-    <>
-      <ListGroup></ListGroup>
-    </>
-  );
+    <Container maxWidth="sm" fixed>
+      <BasicGrid/>
+      <Result gold="500"/>
+    </Container>
+  )
 }
+
+export default App
