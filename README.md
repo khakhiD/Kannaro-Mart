@@ -2,3 +2,5 @@
 **Kannaro-Mart POS MACHINE ver0.1**
 
 for 트위치TV 스트리머 한동숙
+
+![preview](./public/preview.png)
