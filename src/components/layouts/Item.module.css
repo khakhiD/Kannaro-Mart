@@ -1,12 +1,7 @@
-.group {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .groupItem {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .groupItem.image {
@@ -14,6 +9,8 @@
 }
 
 .groupItem p {
+    margin-bottom: 0;
+    margin-left: 5px;
     font-weight: 800;
     font-size: 1.25em;
 }

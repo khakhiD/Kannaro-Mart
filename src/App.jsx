@@ -7,12 +7,15 @@ import Grid from "./components/layouts/Grid";
 const App = () => {
   return (
     <>
-      <h1>칸나로마트 포스기 </h1>
-      <h3>
-        <Badge pill bg="dark">
-          v0.1
-        </Badge>
-      </h3>
+      <div className={classes.header}>
+        <h1>칸나로마트 포스기</h1>
+        <h4>
+          <Badge pill bg="dark">
+            ver 0.1
+          </Badge>
+        </h4>
+      </div>
+
       <Grid />
     </>
   );
