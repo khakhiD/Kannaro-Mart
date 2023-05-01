@@ -22,8 +22,8 @@ const Item = (props) => {
             <Form.Control placeholder="0셋" />
           </InputGroup>
           <InputGroup className="mb-1">
-            <InputGroup.Text>박스</InputGroup.Text>
-            <Form.Control placeholder="0박스" />
+            <InputGroup.Text>상자</InputGroup.Text>
+            <Form.Control placeholder="0빡" />
           </InputGroup>
         </ListGroup.Item>
       </ListGroup>

@@ -8,9 +8,8 @@ const Cards = (props) => {
   return (
     <Card style={{ width: "10rem" }}>
       <ListGroup className={classes.group} variant="flush">
-        
         <ListGroup.Item>
-            {/* 버튼그룹 */}
+          <div className={classes.item}>{props.children}</div>
         </ListGroup.Item>
       </ListGroup>
     </Card>

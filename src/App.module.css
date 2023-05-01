@@ -1,9 +1,19 @@
 .header {
     display: flex;
+    justify-content:space-between;
     align-items: center;
     padding: 10px 10px 10px 10px;
 }
 
-h1 {
-    font-family: sans-serif;
+body {
+    background-color: #242424;
+    color: #fff;
+}
+
+.heading {
+    margin-right: 10px;
+}
+
+.setBtn {
+    justify-self: flex-end;
 }

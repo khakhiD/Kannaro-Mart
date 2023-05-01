@@ -1,23 +1,17 @@
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import Nav from 'react-bootstrap/Nav';
 
 export default function Navbar() {
   return (
-    <Tabs
-      defaultActiveKey="profile"
-      id="justify-tab-example"
-      className="mb-3"
-      justify
-    >
-      <Tab eventKey="home" title="Home">
-        Tab content for Home
-      </Tab>
-      <Tab eventKey="profile" title="Profile">
-        Tab content for Profile
-      </Tab>
-      <Tab eventKey="longer-tab" title="Loooonger Tab">
-        Tab content for Loooonger Tab
-      </Tab>
-    </Tabs>
+    <Nav fill variant="tabs" defaultActiveKey="buy" className=" ">
+      <Nav.Item>
+        <Nav.Link eventKey="buy">구매</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="sell">판매</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="setting">설정</Nav.Link>
+      </Nav.Item>
+    </Nav>
   );
-};
+}

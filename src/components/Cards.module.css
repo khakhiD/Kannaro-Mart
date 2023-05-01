@@ -1,0 +1,11 @@
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.item {
+    justify-content: center;
+    align-items: center;
+}
