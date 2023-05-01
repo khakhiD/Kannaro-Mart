@@ -1,0 +1,19 @@
+.group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.groupItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groupItem.image {
+    height: 48px;
+}
+
+.groupItem p {
+    font-weight: 800;
+    font-size: 1.25em;
+}
