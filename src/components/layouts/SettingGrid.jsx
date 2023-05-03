@@ -8,7 +8,7 @@ const SettingGrid = () => {
     <Container>
       <ul className={classes.itemList}>
         <li className={classes.item}>
-          <InputGroup size="sm" className="mb-1">
+          <InputGroup size="md" className="mb-3">
             <InputGroup.Text
               id="inputGroup-sizing-sm"
               style={{
@@ -18,7 +18,7 @@ const SettingGrid = () => {
                 fontWeight: 600,
               }}
             >
-              전체 적용
+              일괄
             </InputGroup.Text>
             <Form.Control
               aria-label="Small"

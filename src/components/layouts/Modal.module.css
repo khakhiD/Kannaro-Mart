@@ -41,7 +41,11 @@
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.actions p {
+  margin-left: 15px;
 }
 
 .actions button{

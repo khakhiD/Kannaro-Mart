@@ -17,12 +17,31 @@ const ModalOverlay = (props) => {
         <SettingGrid />
       </div>
       <footer className={classes.actions}>
-        <Button variant="secondary" className="mb-1 mt-2 mr-5" onClick={props.onConfirm}>
-          저장하기
-        </Button>
-        <Button variant="success" className="mb-1 mt-2" onClick={props.onConfirm}>
-          설정하기
-        </Button>
+        <p>
+          <Button
+            variant="secondary"
+            className="ml-5"
+            onClick={props.onConfirm}
+          >
+            저장하기
+          </Button>
+          <Button
+            variant="secondary"
+            className="ml-5"
+            onClick={props.onConfirm}
+          >
+            불러오기
+          </Button>
+        </p>
+
+        <p>
+          <Button
+            variant="success"
+            onClick={props.onConfirm}
+          >
+            설정하기
+          </Button>
+        </p>
       </footer>
     </Card>
   );
@@ -40,7 +59,7 @@ function Modal(props) {
         document.getElementById("modal-root")
       )}
       {ReactDOM.createPortal(
-        <Backdrop onConfirm={props.onConfirm}/>,
+        <Backdrop onConfirm={props.onConfirm} />,
         document.getElementById("backdrop-root")
       )}
     </>

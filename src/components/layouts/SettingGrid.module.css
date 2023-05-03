@@ -18,7 +18,5 @@
 }
 
 .caution span {
-    /* text-decoration: underline; */
-    /* font-weight: 600; */
     color: rgb(255, 93, 93);
 }

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDisplay, faGear } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./App.module.css";
+import PriceView from "./components/layouts/PriceView";
 import Grid from "./components/layouts/Grid";
 import Modal from "./components/layouts/Modal";
 
@@ -26,7 +27,7 @@ const App = () => {
         <div>
           <h4>
             <Badge pill bg="danger">
-              ver 0.1
+              ver 0.2
             </Badge>
           </h4>
           <h1 className={classes.heading}>칸나로마트 포스기</h1>
@@ -34,20 +35,17 @@ const App = () => {
 
         <div className={classes.setBtn}>
           <p onClick={modalOpen}>가격 설정</p>
-          <p><FontAwesomeIcon
+          <p>
+            <FontAwesomeIcon
               icon={faGear}
               size="md"
               style={{ color: "#dc3545", faDisplay: "flex" }}
-            /></p>
+            />
+          </p>
         </div>
       </div>
-
-      {/* <div className="navbar">
-        <div className="buy">구매</div>
-        <div className="buy">판매</div>
-        <div className="buy">설정</div>
-      </div> */}
       <Grid />
+      <PriceView />
 
       {/* <Grid /> */}
     </>
