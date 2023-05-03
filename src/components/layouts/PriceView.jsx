@@ -1,19 +1,25 @@
 import React from "react";
-import { ListGroup, Table } from "react-bootstrap";
+import {
+  ListGroup,
+  Button,
+  OverlayTrigger,
+  Tooltip,
+  Popover,
+} from "react-bootstrap";
 import data from "../../assets/data";
 import classes from "./PriceView.module.css";
 
 const repeatItem = (data, m, n) => {
   let arr = [];
-  for (let i=m; i<n; i++) {
+  for (let i = m; i < n; i++) {
     arr.push(
       <Col>
         <Item imgSrc={data[i].iconURI} itemName={data[i].name} />
       </Col>
-    )
+    );
   }
   return arr;
-}
+};
 
 const PriceView = () => {
   return (
@@ -60,14 +66,31 @@ const PriceView = () => {
           {data.map(function (i) {
             return (
               <>
-                <ListGroup.Item style={{ width: "auto", textAlign:"center", fontWeight:"600" }}>
-                  {i.name}
-                  <ListGroup as="ul" style={{fontWeight:"400", marginTop:10}}>
-                    <ListGroup.Item>{i.price}</ListGroup.Item>
-                    <ListGroup.Item>{i.price /* +추가금 */}</ListGroup.Item>
-                    <ListGroup.Item>{i.price /* +추가금 */}</ListGroup.Item>
-                  </ListGroup>
-                </ListGroup.Item>
+                <OverlayTrigger
+                  trigger="hover"
+                  key="bottom"
+                  placement="bottom"
+                  overlay={
+                    <Popover id={`popover-positioned-bottom`}>
+                      <Popover.Body>
+                        <strong>원가: {i.price}</strong><br/>
+                        <strong>구매: {i.price + 15}</strong><br/>
+                        <strong>판매: {i.price + 20}</strong>
+                      </Popover.Body>
+                    </Popover>
+                  }
+                >
+                    <ListGroup.Item
+                      className={classes.lgItem}
+                      style={{
+                        width: "auto",
+                        textAlign: "center",
+                        cursor: "pointer"
+                      }}
+                    >
+                      {i.name}
+                    </ListGroup.Item>
+                </OverlayTrigger>
               </>
             );
           })}

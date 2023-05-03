@@ -12,3 +12,14 @@
     justify-content: center;
     width: 100%;
 }
+
+.previewItem {
+    border: 1px;
+    border-radius: 10px;
+}
+
+.lgItem:hover {
+    background-color: #6c757d;
+    color: #fff;
+    font-weight: 600;
+}
