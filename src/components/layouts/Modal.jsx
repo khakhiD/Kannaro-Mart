@@ -14,15 +14,14 @@ const ModalOverlay = (props) => {
         <p>{props.title}</p>
       </header>
       <div className={classes.content}>
-        <p>{props.message}</p>
         <SettingGrid />
       </div>
       <footer className={classes.actions}>
         <Button variant="secondary" className="mb-1 mt-2 mr-5" onClick={props.onConfirm}>
-          저장
+          저장하기
         </Button>
         <Button variant="success" className="mb-1 mt-2" onClick={props.onConfirm}>
-          설정
+          설정하기
         </Button>
       </footer>
     </Card>
