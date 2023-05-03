@@ -1,0 +1,15 @@
+.container {
+    background-color: #242424;
+    color: #fff
+}
+
+.tableContainer {
+    background-color: red;
+}
+
+.itemList {
+    display: flex;
+    list-style: none;
+    padding-left:0px;
+    flex-direction: column;
+}

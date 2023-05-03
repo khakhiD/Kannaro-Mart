@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Badge } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDisplay, faGear } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./App.module.css";
 import Grid from "./components/layouts/Grid";
-import Modal from './components/layouts/Modal'
+import Modal from "./components/layouts/Modal";
 
 const App = () => {
   const [modalIsVisible, setModalIsVisible] = useState(true);
-  
+
   const modalOpen = () => {
     setModalIsVisible(true);
-  }
+  };
   const modalClose = () => {
     setModalIsVisible(false);
   };
@@ -18,11 +20,7 @@ const App = () => {
   return (
     <>
       {modalIsVisible && (
-        <Modal
-          title="가격 설정"
-          message="testing..."
-          onConfirm={modalClose}
-        />
+        <Modal title="가격 설정" message="testing..." onConfirm={modalClose} />
       )}
       <div className={classes.header}>
         <div>
@@ -35,7 +33,12 @@ const App = () => {
         </div>
 
         <div className={classes.setBtn}>
-          <p className="mb-1 mt-2" onClick={modalOpen}>가격 설정</p>
+          <p onClick={modalOpen}>가격 설정</p>
+          <p><FontAwesomeIcon
+              icon={faGear}
+              size="md"
+              style={{ color: "#dc3545", faDisplay: "flex" }}
+            /></p>
         </div>
       </div>
 

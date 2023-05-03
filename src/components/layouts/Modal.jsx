@@ -1,5 +1,6 @@
 import classes from "./Modal.module.css";
 import { Button, Card } from "react-bootstrap";
+import SettingGrid from "./SettingGrid";
 import ReactDOM from "react-dom";
 
 const Backdrop = (props) => {
@@ -14,12 +15,12 @@ const ModalOverlay = (props) => {
       </header>
       <div className={classes.content}>
         <p>{props.message}</p>
+        <SettingGrid />
       </div>
       <footer className={classes.actions}>
         <Button variant="secondary" className="mb-1 mt-2 mr-5" onClick={props.onConfirm}>
           저장
         </Button>
-        {' '}
         <Button variant="success" className="mb-1 mt-2" onClick={props.onConfirm}>
           설정
         </Button>

@@ -15,9 +15,8 @@ body {
 }
 
 .setBtn {
-    justify-self: flex-end;
+    display: flex;
     color: #dc3545;
-    font-weight: 600;
 }
 
 .setBtn:hover {
@@ -25,4 +24,8 @@ body {
     color: #dc3545;
     cursor: pointer;
     font-weight: 600;
+}
+
+.setBtn p {
+    margin: 0px 0px 0px 3px;
 }
