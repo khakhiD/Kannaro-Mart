@@ -1,9 +1,7 @@
 # 칸나로 마트 포스기 v0.2
-**Kannaro-Mart POS MACHINE**
+**Kannaro-Mart POS MACHINE** for Twitch Streamer "한동숙"
 
-for 트위치TV 스트리머 한동숙
-
-## 미리보기
+## Preview
 <!-- ![preview](./public/preview.gif){: width="60%" height="60%"} -->
 <img src="./public/preview.gif"/>
 
