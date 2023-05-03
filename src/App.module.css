@@ -16,4 +16,13 @@ body {
 
 .setBtn {
     justify-self: flex-end;
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.setBtn:hover {
+    text-decoration: underline; 
+    color: #dc3545;
+    cursor: pointer;
+    font-weight: 600;
 }

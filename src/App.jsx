@@ -1,13 +1,29 @@
-import React from "react";
-import { Badge, Button } from "react-bootstrap";
+import { useState } from "react";
+import { Badge } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./App.module.css";
 import Grid from "./components/layouts/Grid";
-import Navbar from "./components/layouts/Navbar";
+import Modal from './components/layouts/Modal'
 
 const App = () => {
+  const [modalIsVisible, setModalIsVisible] = useState(true);
+  
+  const modalOpen = () => {
+    setModalIsVisible(true);
+  }
+  const modalClose = () => {
+    setModalIsVisible(false);
+  };
+
   return (
     <>
+      {modalIsVisible && (
+        <Modal
+          title="가격 설정"
+          message="testing..."
+          onConfirm={modalClose}
+        />
+      )}
       <div className={classes.header}>
         <div>
           <h4>
@@ -19,9 +35,7 @@ const App = () => {
         </div>
 
         <div className={classes.setBtn}>
-          <a href="" className="mb-1 mt-2">
-            가격 설정
-          </a>
+          <p className="mb-1 mt-2" onClick={modalOpen}>가격 설정</p>
         </div>
       </div>
 
