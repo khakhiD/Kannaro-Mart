@@ -38,7 +38,7 @@ const App = () => {
           <p>
             <FontAwesomeIcon
               icon={faGear}
-              size="md"
+              size="lg"
               style={{ color: "#dc3545", faDisplay: "flex" }}
             />
           </p>

@@ -1,9 +1,47 @@
-import React from "react";
+import { useState, useRef } from "react";
 import classes from "./SettingGrid.module.css";
 import data from "../../assets/data";
 import { Container, Button, Row, Col, Image, InputGroup, Form } from "react-bootstrap";
 
-const SettingGrid = () => {
+const SettingGrid = (props) => {
+  const [allSetInputs, setAllSetInputs] = useState({
+    buy: 0,
+    sell: 0
+  });
+  
+  const [newBuyPrice, setNewBuyPrice]  = useState(0);
+  const [newSellPrice, setNewSellPrice]  = useState(0);
+  const [isAllSet, setIsAllSet] = useState(false);
+  const [price, setPrice] = useState(data.price);
+
+  const onSettingHandler = (e) => {
+    console.log(newBuyPrice, newSellPrice)
+    setAllSetInputs({
+      buy: newBuyPrice,
+      sell: newSellPrice
+    });
+    setIsAllSet(true);
+    for (let i=0; i<data.length; i++) {
+      
+    }
+    console.log(allSetInputs);
+  }
+
+  const onChangeHandler = (e) => {
+    if (e.target.id === 'buyPriceAll') {
+      setNewBuyPrice(Number(e.target.value));
+    }
+    if (e.target.id === 'sellPriceAll') {
+      setNewSellPrice(Number(e.target.value));
+    }
+    if (e.target.name === 'buyPriceInput') {
+      console.log(price)
+    }
+    if (e.target.name === 'sellPriceInput') {
+      console.log(price)
+    }
+  }
+
   return (
     <Container>
       <ul className={classes.itemList}>
@@ -21,18 +59,24 @@ const SettingGrid = () => {
               일괄
             </InputGroup.Text>
             <Form.Control
-              aria-label="Small"
-              aria-describedby="inputGroup-sizing-sm"
-              placeholder="판매 추가금"
-              style={{textAlign: "center", }}
-            />
-            <Form.Control
+              as="input"
               aria-label="Small"
               aria-describedby="inputGroup-sizing-sm"
               placeholder="구매 추가금"
               style={{textAlign: "center"}}
+              onChange={onChangeHandler}
+              id="buyPriceAll"
             />
-            <Button variant="outline-secondary" id="button-addon2">
+            <Form.Control
+              as="input"
+              aria-label="Small"
+              aria-describedby="inputGroup-sizing-sm"
+              placeholder="판매 추가금"
+              style={{textAlign: "center"}}
+              onChange={onChangeHandler}
+              id="sellPriceAll"
+            />
+            <Button variant="outline-secondary" id="priceSettingAll" as="button" onClick={onSettingHandler}>
               적용
             </Button>
           </InputGroup>
@@ -64,6 +108,7 @@ const SettingGrid = () => {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder={`${i.name} 원가`}
                   style={{textAlign: "right", fontWeight:600}}
+                  id={`${i.ids}Original`}
                 />
                 <InputGroup.Text style={{background: "#198752", color:"#fff"}}>구매</InputGroup.Text>
                 <Form.Control
@@ -71,6 +116,10 @@ const SettingGrid = () => {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="+ 추가금"
                   style={{textAlign: "right"}}
+                  id={`${i.ids}Buy`}
+                  name="BuyPriceInput"
+                  defaultValue={isAllSet ? newBuyPrice : null}
+                  onChange={onChangeHandler}
                 />
                 <InputGroup.Text style={{background: "#dc3545", color:"#fff"}}>판매</InputGroup.Text>
                 <Form.Control
@@ -78,6 +127,10 @@ const SettingGrid = () => {
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder="+ 추가금"
                   style={{textAlign: "right"}}
+                  id={`${i.ids}Sell`}
+                  name="SellPriceInput"
+                  defaultValue={isAllSet ? newSellPrice : null}
+                  onChange={onChangeHandler}
                 />
               </InputGroup>
             </li>

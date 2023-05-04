@@ -1,6 +1,7 @@
 import classes from "./Modal.module.css";
 import { Button, Card } from "react-bootstrap";
 import SettingGrid from "./SettingGrid";
+import { useState } from 'react'
 import ReactDOM from "react-dom";
 
 const Backdrop = (props) => {
@@ -37,7 +38,7 @@ const ModalOverlay = (props) => {
         <p>
           <Button
             variant="success"
-            onClick={props.onConfirm}
+            onClick={props.onSetting}
           >
             설정하기
           </Button>
@@ -48,6 +49,14 @@ const ModalOverlay = (props) => {
 };
 
 function Modal(props) {
+  let [price, setPrice] = useState([]);
+
+  const onSetting = (newPrice) => {
+    setPrice([newPrice]);
+    console.log(price)
+    props.onConfirm();
+  };
+
   return (
     <>
       {ReactDOM.createPortal(
@@ -55,6 +64,7 @@ function Modal(props) {
           title={props.title}
           message={props.message}
           onConfirm={props.onConfirm}
+          onSetting={onSetting}
         />,
         document.getElementById("modal-root")
       )}
