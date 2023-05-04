@@ -24,54 +24,17 @@ const repeatItem = (data, m, n) => {
 const PriceView = () => {
   return (
     <>
-      {/* <Table responsive="sm" striped bordered hover variant="dark">
-        <thead>
-          <tr>
-            {Array.from({ length: 6 }).map((_, index) => (
-              <th colSpan={3} key={index}>
-                쌀
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {Array.from({ length: 18 }).map((_, index) => (
-              <td key={index}>쌀{index}</td>
-            ))}
-          </tr>
-        </tbody>
-      </Table>
-      <Table responsive="sm" striped bordered hover variant="dark">
-        <thead>
-          <tr>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <th colSpan={3} key={index}>
-                쌀
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {Array.from({ length: 15 }).map((_, index) => (
-              <td key={index}>쌀{index}</td>
-            ))}
-          </tr>
-        </tbody>
-      </Table> */}
-
       <div className={classes.container}>
         <ListGroup as="ul" horizontal="sm" className={classes.listGroup}>
           {data.map(function (i) {
             return (
               <>
                 <OverlayTrigger
-                  trigger="hover"
-                  key="bottom"
-                  placement="bottom"
+                  trigger="click"
+                  key="top"
+                  placement="top"
                   overlay={
-                    <Popover id={`popover-positioned-bottom`}>
+                    <Popover id={`popover-positioned-top`}>
                       <Popover.Body>
                         <strong>원가: {i.price}</strong><br/>
                         <strong>구매: {i.price + 15}</strong><br/>

@@ -1,20 +1,23 @@
 .box {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    background-color: #242424;
+    border-radius: .3em;
+    padding: 5px 5px 5px 5px;
 }
 
 .output {
-    margin-left: .5em;
-    font-weight: 600;
+    margin-left: .2em;
+    font-weight: 900;
     font-size: 1.2em;
-    color: #ffd900;
+    color: #fff;
+    overflow: hidden;
 }
 
-.box:hover {
+.box:hover{
     text-decoration: underline;
-    color: #ffd900;
+    color: #fff;
     /* background-color:#ffd900; */
     transition: 0.3s ease-in-out;
     cursor: pointer;

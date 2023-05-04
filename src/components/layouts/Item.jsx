@@ -6,7 +6,7 @@ import Img from "../Img";
 
 const Item = (props) => {
   return (
-    <Card style={{ width: "10rem" }}>
+    <Card style={{ width: "10em" }}>
       <ListGroup className={classes.group} variant="flush">
         <ListGroup.Item className={classes.groupItem}>
           <Img src={props.imgSrc} className={classes.image}/>
