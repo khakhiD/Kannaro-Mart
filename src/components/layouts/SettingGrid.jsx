@@ -63,7 +63,7 @@ const SettingGrid = () => {
                   aria-label="Small"
                   aria-describedby="inputGroup-sizing-sm"
                   placeholder={`${i.name} 원가`}
-                  style={{textAlign: "right"}}
+                  style={{textAlign: "right", fontWeight:600}}
                 />
                 <InputGroup.Text style={{background: "#198752", color:"#fff"}}>구매</InputGroup.Text>
                 <Form.Control
