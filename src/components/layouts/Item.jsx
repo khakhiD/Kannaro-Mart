@@ -4,6 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./Item.module.css";
 import Img from "../Img";
 
+const calc = () => {
+  
+}
+
+
 const Item = (props) => {
   return (
     <Card style={{ width: "10em" }}>

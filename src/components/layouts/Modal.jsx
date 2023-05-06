@@ -15,7 +15,7 @@ const ModalOverlay = (props) => {
         <p>{props.title}</p>
       </header>
       <div className={classes.content}>
-        <SettingGrid />
+        <SettingGrid price={props.price}/>
       </div>
       <footer className={classes.actions}>
         <p>
