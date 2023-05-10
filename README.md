@@ -16,3 +16,14 @@
 
 - 가격 설정 UI 추가  
   <img src="./public/update0.2-setting.png"  width="60%"/>
+  
+## v1.0 예정
+- UI 및 기능 코드 전체 재검토 예정
+  - 상태 관리 API 사용 예정
+  - UI 간소화 및 스타일 변경
+- 반응형 스타일 추가 예정
+  - LARGE, SMALL 두 개의 미디어 쿼리 추가
+  - 그리드 변경
+- 저장 기능 추가 예정
+  - LocalStorage 활용
+  - 저장한 데이터 불러오기 추가 예정
