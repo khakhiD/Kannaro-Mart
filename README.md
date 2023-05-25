@@ -1,5 +1,8 @@
 # 칸나로 마트 포스기 v0.2
 **Kannaro-Mart POS MACHINE** for Twitch Streamer "한동숙"
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+2023.5.25. 개인적 사유로 일시 개발 중단
+
 
 ## Preview
 <!-- ![preview](./public/preview.gif){: width="60%" height="60%"} -->
